@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C78A8B22-1B49-408F-A8B9-8E354ACC9816}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExtJsTest</RootNamespace>
+    <AssemblyName>ExtJsTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\img\01.png" />
+    <Content Include="Content\img\02.png" />
+    <Content Include="Content\img\03.png" />
+    <Content Include="Content\js\ExtJs\ext-all.js" />
+    <Content Include="Content\js\ExtJs\ext-locale-zh_CN.js" />
+    <Content Include="Content\js\ExtJs\ext-theme-classic-all.css" />
+    <Content Include="Content\js\ExtJs\images\boundlist\trigger-arrow.png" />
+    <Content Include="Content\js\ExtJs\images\box\corners-blue.gif" />
+    <Content Include="Content\js\ExtJs\images\box\corners.gif" />
+    <Content Include="Content\js\ExtJs\images\box\l-blue.gif" />
+    <Content Include="Content\js\ExtJs\images\box\l.gif" />
+    <Content Include="Content\js\ExtJs\images\box\r-blue.gif" />
+    <Content Include="Content\js\ExtJs\images\box\r.gif" />
+    <Content Include="Content\js\ExtJs\images\box\tb-blue.gif" />
+    <Content Include="Content\js\ExtJs\images\box\tb.gif" />
+    <Content Include="Content\js\ExtJs\images\breadcrumb\default-arrow-open-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\breadcrumb\default-arrow-open.gif" />
+    <Content Include="Content\js\ExtJs\images\breadcrumb\default-arrow-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\breadcrumb\default-arrow.gif" />
+    <Content Include="Content\js\ExtJs\images\breadcrumb\default-scroll-left.gif" />
+    <Content Include="Content\js\ExtJs\images\breadcrumb\default-scroll-right.gif" />
+    <Content Include="Content\js\ExtJs\images\breadcrumb\default-split-arrow-open-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\breadcrumb\default-split-arrow-open.gif" />
+    <Content Include="Content\js\ExtJs\images\breadcrumb\default-split-arrow-over-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\breadcrumb\default-split-arrow-over.gif" />
+    <Content Include="Content\js\ExtJs\images\breadcrumb\default-split-arrow-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\breadcrumb\default-split-arrow.gif" />
+    <Content Include="Content\js\ExtJs\images\btn-group\btn-group-default-framed-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn-group\btn-group-default-framed-notitle-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn-group\btn-group-default-framed-notitle-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn-group\btn-group-default-framed-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-disabled-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-disabled-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-disabled-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-disabled-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-focus-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-focus-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-focus-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-focus-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-over-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-over-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-over-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-over-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-pressed-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-pressed-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-pressed-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-pressed-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-large-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-disabled-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-disabled-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-disabled-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-disabled-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-focus-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-focus-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-focus-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-focus-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-over-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-over-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-over-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-over-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-pressed-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-pressed-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-pressed-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-pressed-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-medium-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-disabled-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-disabled-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-disabled-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-disabled-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-focus-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-focus-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-focus-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-focus-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-over-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-over-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-over-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-over-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-pressed-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-pressed-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-pressed-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-pressed-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-small-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-disabled-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-disabled-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-disabled-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-disabled-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-focus-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-focus-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-focus-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-focus-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-over-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-over-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-over-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-over-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-pressed-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-pressed-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-pressed-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-large-pressed-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-disabled-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-disabled-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-disabled-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-disabled-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-focus-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-focus-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-focus-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-focus-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-over-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-over-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-over-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-over-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-pressed-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-pressed-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-pressed-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-medium-pressed-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-disabled-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-disabled-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-disabled-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-disabled-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-focus-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-focus-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-focus-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-focus-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-over-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-over-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-over-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-over-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-pressed-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-pressed-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-pressed-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\btn\btn-default-toolbar-small-pressed-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\button\arrow-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\button\arrow.gif" />
+    <Content Include="Content\js\ExtJs\images\button\btn.gif" />
+    <Content Include="Content\js\ExtJs\images\button\group-cs.gif" />
+    <Content Include="Content\js\ExtJs\images\button\group-lr.gif" />
+    <Content Include="Content\js\ExtJs\images\button\group-tb.gif" />
+    <Content Include="Content\js\ExtJs\images\button\s-arrow-b-noline.gif" />
+    <Content Include="Content\js\ExtJs\images\button\s-arrow-b.gif" />
+    <Content Include="Content\js\ExtJs\images\button\s-arrow-bo.gif" />
+    <Content Include="Content\js\ExtJs\images\button\s-arrow-light-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\button\s-arrow-light.gif" />
+    <Content Include="Content\js\ExtJs\images\button\s-arrow-noline-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\button\s-arrow-noline.gif" />
+    <Content Include="Content\js\ExtJs\images\button\s-arrow-o-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\button\s-arrow-o.gif" />
+    <Content Include="Content\js\ExtJs\images\button\s-arrow-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\button\s-arrow.gif" />
+    <Content Include="Content\js\ExtJs\images\datepicker\datepicker-footer-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\datepicker\datepicker-header-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\dd\drop-add.gif" />
+    <Content Include="Content\js\ExtJs\images\dd\drop-no.gif" />
+    <Content Include="Content\js\ExtJs\images\dd\drop-yes.gif" />
+    <Content Include="Content\js\ExtJs\images\editor\tb-sprite.gif" />
+    <Content Include="Content\js\ExtJs\images\form\checkbox.gif" />
+    <Content Include="Content\js\ExtJs\images\form\clear-trigger-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\form\clear-trigger.gif" />
+    <Content Include="Content\js\ExtJs\images\form\date-trigger-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\form\date-trigger.gif" />
+    <Content Include="Content\js\ExtJs\images\form\error-tip-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\form\exclamation.gif" />
+    <Content Include="Content\js\ExtJs\images\form\radio.gif" />
+    <Content Include="Content\js\ExtJs\images\form\search-trigger-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\form\search-trigger.gif" />
+    <Content Include="Content\js\ExtJs\images\form\spinner-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\form\spinner-small-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\form\spinner-small.gif" />
+    <Content Include="Content\js\ExtJs\images\form\spinner.gif" />
+    <Content Include="Content\js\ExtJs\images\form\tag-field-item-close.gif" />
+    <Content Include="Content\js\ExtJs\images\form\text-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\form\trigger-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\form\trigger-square-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\form\trigger-square.gif" />
+    <Content Include="Content\js\ExtJs\images\form\trigger-tpl-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\form\trigger-tpl.gif" />
+    <Content Include="Content\js\ExtJs\images\form\trigger.gif" />
+    <Content Include="Content\js\ExtJs\images\grid-row-editor-buttons\grid-row-editor-buttons-default-bottom-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\grid-row-editor-buttons\grid-row-editor-buttons-default-bottom-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\grid-row-editor-buttons\grid-row-editor-buttons-default-top-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\grid-row-editor-buttons\grid-row-editor-buttons-default-top-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\arrow-left-white.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\arrow-right-white.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\cell-special-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\cell-special-bg.png" />
+    <Content Include="Content\js\ExtJs\images\grid\cell-special-selected-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\cell-special-selected-bg.png" />
+    <Content Include="Content\js\ExtJs\images\grid\col-move-bottom.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\col-move-top.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\column-header-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\column-header-over-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\columns.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\dd-insert-arrow-left.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\dd-insert-arrow-left.png" />
+    <Content Include="Content\js\ExtJs\images\grid\dd-insert-arrow-right.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\dd-insert-arrow-right.png" />
+    <Content Include="Content\js\ExtJs\images\grid\dirty-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\dirty.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\done.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\drop-no.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\drop-yes.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\filters\equals.png" />
+    <Content Include="Content\js\ExtJs\images\grid\filters\find.png" />
+    <Content Include="Content\js\ExtJs\images\grid\filters\greater_than.png" />
+    <Content Include="Content\js\ExtJs\images\grid\filters\less_than.png" />
+    <Content Include="Content\js\ExtJs\images\grid\footer-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\grid-blue-hd.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\grid-blue-split.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\grid-hrow.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\grid-loading.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\grid-split.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\grid-vista-hd.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\grid3-hd-btn-left.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\grid3-hd-btn.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\grid3-hrow-over.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\grid3-hrow.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\grid3-rowheader.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\group-by.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\group-collapse.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\group-expand-sprite.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\group-expand.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\hd-pop.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\hmenu-asc.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\hmenu-desc.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\hmenu-lock.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\hmenu-lock.png" />
+    <Content Include="Content\js\ExtJs\images\grid\hmenu-unlock.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\hmenu-unlock.png" />
+    <Content Include="Content\js\ExtJs\images\grid\invalid_line.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\loading.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\mso-hd.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\nowait.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\page-first-disabled.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\page-first.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\page-last-disabled.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\page-last.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\page-next-disabled.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\page-next.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\page-prev-disabled.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\page-prev.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\pick-button.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\property-cell-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\property-cell-selected-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\refresh-disabled.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\refresh.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\row-check-sprite.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\row-expand-sprite.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\row-over.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\row-sel.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\sort-hd.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\sort_asc.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\sort_desc.gif" />
+    <Content Include="Content\js\ExtJs\images\grid\wait.gif" />
+    <Content Include="Content\js\ExtJs\images\layout\mini-bottom.gif" />
+    <Content Include="Content\js\ExtJs\images\layout\mini-left.gif" />
+    <Content Include="Content\js\ExtJs\images\layout\mini-right.gif" />
+    <Content Include="Content\js\ExtJs\images\layout\mini-top.gif" />
+    <Content Include="Content\js\ExtJs\images\magnify.png" />
+    <Content Include="Content\js\ExtJs\images\menu\default-checked.gif" />
+    <Content Include="Content\js\ExtJs\images\menu\default-group-checked.gif" />
+    <Content Include="Content\js\ExtJs\images\menu\default-menu-parent-left.gif" />
+    <Content Include="Content\js\ExtJs\images\menu\default-menu-parent.gif" />
+    <Content Include="Content\js\ExtJs\images\menu\default-scroll-bottom.gif" />
+    <Content Include="Content\js\ExtJs\images\menu\default-scroll-top.gif" />
+    <Content Include="Content\js\ExtJs\images\menu\default-unchecked.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-bottom-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-bottom-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-bottom-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-bottom-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-bottom-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-bottom-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-bottom-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-bottom-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-bottom-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-left-bg-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-left-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-left-corners-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-left-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-left-fbg-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-left-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-left-sides-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-left-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-right-bg-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-right-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-right-corners-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-right-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-right-fbg-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-right-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-right-sides-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-right-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-top-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-top-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-top-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-collapsed-top-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-left-bg-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-left-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-left-corners-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-left-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-left-fbg-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-left-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-left-sides-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-left-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-right-bg-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-right-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-right-corners-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-right-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-right-fbg-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-right-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-right-sides-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-right-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-top-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-top-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-top-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-framed-top-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-left-bg-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-left-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-right-bg-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-right-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel-header\panel-header-default-top-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\panel\panel-default-framed-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\panel\panel-default-framed-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\progress\progress-default-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\blue-loading.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\calendar.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\glass-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\hd-sprite.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\icon-error.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\icon-info.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\icon-question.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\icon-warning.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\large-loading.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\left-btn.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\loading-balls.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\right-btn.gif" />
+    <Content Include="Content\js\ExtJs\images\shared\shadow-c.png" />
+    <Content Include="Content\js\ExtJs\images\shared\shadow-lr.png" />
+    <Content Include="Content\js\ExtJs\images\shared\shadow.png" />
+    <Content Include="Content\js\ExtJs\images\shared\warning.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\e-handle-dark.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\e-handle.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\ne-handle-dark.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\ne-handle.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\nw-handle-dark.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\nw-handle.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\s-handle-dark.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\s-handle.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\se-handle-dark.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\se-handle.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\square.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\sw-handle-dark.gif" />
+    <Content Include="Content\js\ExtJs\images\sizer\sw-handle.gif" />
+    <Content Include="Content\js\ExtJs\images\slider\slider-bg.png" />
+    <Content Include="Content\js\ExtJs\images\slider\slider-thumb.png" />
+    <Content Include="Content\js\ExtJs\images\slider\slider-v-bg.png" />
+    <Content Include="Content\js\ExtJs\images\slider\slider-v-thumb.png" />
+    <Content Include="Content\js\ExtJs\images\tab-bar\default-scroll-bottom-left.gif" />
+    <Content Include="Content\js\ExtJs\images\tab-bar\default-scroll-bottom-right.gif" />
+    <Content Include="Content\js\ExtJs\images\tab-bar\default-scroll-left-bottom.gif" />
+    <Content Include="Content\js\ExtJs\images\tab-bar\default-scroll-left-top.gif" />
+    <Content Include="Content\js\ExtJs\images\tab-bar\default-scroll-right-bottom.gif" />
+    <Content Include="Content\js\ExtJs\images\tab-bar\default-scroll-right-top.gif" />
+    <Content Include="Content\js\ExtJs\images\tab-bar\default-scroll-top-left.gif" />
+    <Content Include="Content\js\ExtJs\images\tab-bar\default-scroll-top-right.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-active-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-active-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-active-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-active-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-disabled-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-disabled-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-disabled-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-disabled-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-over-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-over-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-over-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-over-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-bottom-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-close.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-active-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-active-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-active-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-disabled-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-disabled-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-disabled-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-over-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-over-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-over-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-left-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-active-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-active-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-active-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-disabled-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-disabled-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-disabled-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-over-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-over-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-over-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-right-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-active-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-active-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-active-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-active-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-disabled-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-disabled-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-disabled-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-disabled-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-over-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-over-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-over-fbg.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-over-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tab\tab-default-top-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tip\tip-default-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tip\tip-default-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\tip\tip-form-invalid-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\tip\tip-form-invalid-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\toolbar\default-more-left.gif" />
+    <Content Include="Content\js\ExtJs\images\toolbar\default-more.gif" />
+    <Content Include="Content\js\ExtJs\images\toolbar\default-scroll-bottom.gif" />
+    <Content Include="Content\js\ExtJs\images\toolbar\default-scroll-left.gif" />
+    <Content Include="Content\js\ExtJs\images\toolbar\default-scroll-right.gif" />
+    <Content Include="Content\js\ExtJs\images\toolbar\default-scroll-top.gif" />
+    <Content Include="Content\js\ExtJs\images\toolbar\footer-more-left.gif" />
+    <Content Include="Content\js\ExtJs\images\toolbar\footer-more.gif" />
+    <Content Include="Content\js\ExtJs\images\toolbar\footer-scroll-left.gif" />
+    <Content Include="Content\js\ExtJs\images\toolbar\footer-scroll-right.gif" />
+    <Content Include="Content\js\ExtJs\images\toolbar\toolbar-default-bg.gif" />
+    <Content Include="Content\js\ExtJs\images\tools\tool-sprite-tpl.gif" />
+    <Content Include="Content\js\ExtJs\images\tools\tool-sprites.gif" />
+    <Content Include="Content\js\ExtJs\images\tools\tools-sprites-trans.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\arrows-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\arrows.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\drop-above.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\drop-add.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\drop-append.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\drop-below.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\drop-between.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\drop-no.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\drop-over.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\drop-under.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\drop-yes.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-end-minus-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-end-minus.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-end-plus-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-end-plus.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-end-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-end.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-line-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-line.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-minus-nl-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-minus-nl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-minus-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-minus.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-plus-nl-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-plus-nl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-plus-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-plus.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\elbow.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\folder-open-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\folder-open.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\folder-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\folder.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\leaf-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\leaf.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\loading.gif" />
+    <Content Include="Content\js\ExtJs\images\tree\s.gif" />
+    <Content Include="Content\js\ExtJs\images\util\splitter\mini-bottom.gif" />
+    <Content Include="Content\js\ExtJs\images\util\splitter\mini-left.gif" />
+    <Content Include="Content\js\ExtJs\images\util\splitter\mini-right.gif" />
+    <Content Include="Content\js\ExtJs\images\util\splitter\mini-top.gif" />
+    <Content Include="Content\js\ExtJs\images\ux\dashboard\magnify.png" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-bottom-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-bottom-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-collapsed-bottom-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-collapsed-bottom-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-collapsed-left-corners-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-collapsed-left-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-collapsed-left-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-collapsed-right-corners-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-collapsed-right-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-collapsed-right-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-collapsed-top-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-collapsed-top-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-left-corners-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-left-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-left-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-right-corners-rtl.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-right-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-right-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-top-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\window-header\window-header-default-top-sides.gif" />
+    <Content Include="Content\js\ExtJs\images\window\toast\fade-blue.png" />
+    <Content Include="Content\js\ExtJs\images\window\toast\fader.png" />
+    <Content Include="Content\js\ExtJs\images\window\toast\icon16_error.png" />
+    <Content Include="Content\js\ExtJs\images\window\toast\icon16_info.png" />
+    <Content Include="Content\js\ExtJs\images\window\window-default-corners.gif" />
+    <Content Include="Content\js\ExtJs\images\window\window-default-sides.gif" />
+    <Content Include="Content\js\Res.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Script\Home\check.js" />
+    <Content Include="Script\Home\index.js" />
+    <Content Include="Script\Home\show.js" />
+    <Content Include="Script\Home\tree.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExtJsTest.Dao\ExtJsTest.Dao.csproj">
+      <Project>{610db029-27f7-4d24-9bd5-43c3b65d4d56}</Project>
+      <Name>ExtJsTest.Dao</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Show.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Tree.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Check.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3931</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3931/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

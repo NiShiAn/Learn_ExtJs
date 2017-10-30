@@ -1,0 +1,10 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/.vs
+/ExtJsTest/bin
+/ExtJsTest/obj/Debug
+/ExtJsTest.Dao/bin/Debug
+/ExtJsTest.Dao/obj/Debug
+/packages
